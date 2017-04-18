@@ -1,0 +1,21 @@
+CREATE TABLE `customer` (
+  `custId` varchar(19) COLLATE utf8_bin NOT NULL COMMENT '编号',
+  `custName` varchar(30) COLLATE utf8_bin DEFAULT NULL COMMENT '姓名',
+  `custGender` varchar(3) COLLATE utf8_bin DEFAULT NULL COMMENT '性别',
+  `custBirth` varchar(10) COLLATE utf8_bin DEFAULT NULL COMMENT '生日',
+  `custNative` varchar(10) COLLATE utf8_bin DEFAULT NULL COMMENT '籍贯',
+  `custEdu` varchar(10) COLLATE utf8_bin DEFAULT NULL COMMENT '学历',
+  `custSchool` varchar(30) COLLATE utf8_bin DEFAULT NULL COMMENT '学校',
+  `custTel` varchar(11) COLLATE utf8_bin DEFAULT NULL COMMENT '电话',
+  `custEmail` varchar(30) COLLATE utf8_bin DEFAULT NULL COMMENT '邮箱',
+  `custJonIntention` varchar(50) COLLATE utf8_bin DEFAULT NULL COMMENT '求职意向',
+  `custSource` varchar(100) COLLATE utf8_bin DEFAULT NULL COMMENT '来源',
+  `custHA` varchar(30) COLLATE utf8_bin DEFAULT NULL COMMENT '家庭地址',
+  `custComment` varchar(200) COLLATE utf8_bin DEFAULT NULL COMMENT '备注',
+  `custStatus` varchar(10) COLLATE utf8_bin DEFAULT NULL COMMENT '状态（无效 未通 死单 上门 紧跟）',
+  `year` varchar(4) COLLATE utf8_bin DEFAULT NULL COMMENT '年',
+  `month` varchar(2) COLLATE utf8_bin DEFAULT NULL COMMENT '月',
+  `day` varchar(2) COLLATE utf8_bin DEFAULT NULL COMMENT '日',
+  `custTime` timestamp NULL DEFAULT NULL COMMENT '时间',
+  PRIMARY KEY (`custId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin

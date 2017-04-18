@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="crm" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor name="encodingInterceptor"
+				class="cn.zyf.interceptor.EncodingInterceptor"></interceptor>
+			<interceptor-stack name="myInter">
+				<interceptor-ref name="encodingInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- class为spring容器中的引用 -->
+		<action name="customer_*" class="customerAction" method="{1}">
+			<interceptor-ref name="myInter"></interceptor-ref>
+			<result name="success">/${pageContext.request.contextPath}/salesAssistant/main.jsp
+			</result>
+			<result name="error">/jsp/error.jsp</result>
+
+		</action>
+
+	</package>
+
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+
